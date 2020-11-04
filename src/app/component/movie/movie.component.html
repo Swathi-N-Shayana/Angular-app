@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="input-forms">
+    TITLE: <input type="text" placeholder="Name" [(ngModel)]="movie.title"><br>
+    YEAR: <input type="text" placeholder="Year" [(ngModel)]="movie.year"><br>
+    IMAGE: <input type="text" placeholder="ImageURL" [(ngModel)]="movie.image"><br>
+    RATINGS:<br>
+    <input type="radio" name="rating" id="1" value="1" [(ngModel)]="movie.rating">
+    <label for="1">1</label>
+    <input type="radio" name="rating" id="2" value="2" [(ngModel)]="movie.rating">
+    <label for="2">2</label>
+    <input type="radio" name="rating" id="3" value="3" [(ngModel)]="movie.rating">
+    <label for="3">3</label>
+    <input type="radio" name="rating" id="4" value="4" [(ngModel)]="movie.rating">
+    <label for="4">4</label>
+    <input type="radio" name="rating" id="5" value="5" [(ngModel)]="movie.rating">
+    <label for="5">5</label><br>
+    <button (click)="save()">ADD</button>
+  </div>
+  <div class="movieContainer">
+    <div class="movieList" *ngFor="let movie of movieList">
+      <img class="image" [src]="movie.image" alt="">
+      <p class="title">{{movie.title}}</p>
+      <p class="year">{{movie.year}}</p>
+      <p class="rating">{{movie.rating}}</p>
+    </div>
+  </div>
+</div>

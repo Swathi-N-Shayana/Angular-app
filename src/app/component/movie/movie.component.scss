@@ -1,0 +1,25 @@
+.container {
+    .input-forms {
+        border: 1px solid gray;
+        padding: 20px;
+    }
+    input {
+        display: inline;
+        margin-bottom: 15px;
+      }
+}
+.movieContainer {
+    display: flex;
+}
+
+.image {
+    margin : 10px;
+    width: 150px;
+    height: 200px;
+}
+
+.image:hover {
+    transition: 0.5s all;
+    transform: scale(1.1);
+}
+
