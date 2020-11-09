@@ -3,4 +3,6 @@ export interface Movie {
     year:number;
     image:string;
     rating:number;
+    id:string;
+    trailer:string;
 }

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Movie } from './movie';
-import { MOVIE } from './mockmovielist';
+import { MovieService } from 'src/app/service/movie.service';
 
 @Component({
   selector: 'app-movie',
@@ -14,17 +14,29 @@ export class MovieComponent implements OnInit {
     title: "",
     year: 0,
     image: "",
-    rating: 0
+    rating: 0,
+    id:'',
+    trailer:''
   }
 
-  movieList = MOVIE;
-  constructor() { }
+  movieList : Movie[];
+
+  constructor(private movieservice: MovieService ) { }
 
   ngOnInit(): void {
+    this.loadmovie()
   }
 
-  save() {
-    const tempMovie: Movie = { ...this.movie }
+  save():void {
+    this.movie.id = this.getRandomString()
+   const tempMovie: Movie = { ...this.movie }
     this.movieList.push(tempMovie)
+  }
+  getRandomString(): string {
+    return Math.floor(Math.random() * Math.floor(30000)).toString()
+  }
+
+  loadmovie():void {
+    this.movieList = this.movieservice.getAllMovies()
   }
 }

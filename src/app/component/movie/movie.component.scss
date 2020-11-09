@@ -1,25 +1,119 @@
+h1 {
+    color: rgb(233, 233, 223);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 28px;
+    text-align: center;
+}
+
 .container {
+    background-color: #081b2e;
+
     .input-forms {
+        input[type=text] {
+            width: 22%;
+            padding: 10px 15px;
+            margin: 5px 0 10px 30px;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
         border: 1px solid gray;
+        font-family: -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Helvetica,
+        Arial,
+        sans-serif,
+        "Apple Color Emoji",
+        "Segoe UI Emoji",
+        "Segoe UI Symbol";
+        color:rgb(233, 233, 223);
         padding: 20px;
+        margin-bottom: 20px;
+
+        .btn {
+            background-color: #4CAF50;
+            /* Green */
+            border: none;
+            color: white;
+            padding: 10px 28px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 12px;
+            margin: 2px 2px;
+            cursor: pointer;
+        }
     }
+
     input {
         display: inline;
         margin-bottom: 15px;
-      }
+    }
+}
+.overlayeffect {
+    position: relative;
+    width: 300px;
+}
+
+.overlayimage {
+    display:block;
+    width:100%;
+}
+
+.overlay {
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height: 100%;
+    background: rgba(0,0,0,0.01);
+    color: #ffffff;
+    display: flex;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: 0.5s all;
+}
+
+.overlay:hover {
+    opacity: 1;
+}
+
+.img_title {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.img_year {
+    font-size: 1.2em;
+    margin-top: 0.25em;
 }
 .movieContainer {
     display: flex;
+
+    .movieList {
+        margin-right: 20px;
+    }
+
+    a {
+        color: rgb(233, 233, 223);
+        text-decoration: none;
+
+        &:hover {
+            color: rgb(138, 120, 120);
+            text-decoration: none;
+        }
+    }
 }
 
 .image {
-    margin : 10px;
-    width: 150px;
+    margin: 10px;
+    width: 300px;
     height: 200px;
 }
-
-.image:hover {
-    transition: 0.5s all;
-    transform: scale(1.1);
-}
-
