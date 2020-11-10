@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
 import { MovieService } from 'src/app/service/movie.service';
 import { Movie } from '../movie/movie';
@@ -10,16 +11,17 @@ import { Movie } from '../movie/movie';
 })
 export class MovietrailerComponent implements OnInit {
 
-  movie : Movie;
-  constructor( private movieservice : MovieService,
-    private activatedRoute : ActivatedRoute) { }
+  movie: Movie;
+  url: SafeResourceUrl;
+  
+  constructor(private movieservice : MovieService,
+    private activatedRoute : ActivatedRoute,
+    private sanitizer: DomSanitizer) {
+  }
 
   ngOnInit(): void {
     const id = this.activatedRoute.snapshot.paramMap.get('movieid');
-    this.loadMovie(id)
-  }
-
-  loadMovie(id : string) : void {
-    this.movie = this.movieservice.getMovie(id)
+    this.movie = this.movieservice.getMovie(id);
+    this.url = this.sanitizer.bypassSecurityTrustResourceUrl(this.movie.trailer);
   }
 }

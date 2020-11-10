@@ -7,7 +7,7 @@ export const MOVIE : Movie[] = [
     image:"https://picsum.photos/200/300",
     rating:5,
     id:"123455",
-    trailer: "https://youtu.be/hDNNmeeJs1Q"
+    trailer: "https://www.youtube.com/embed/sLisEEwYZvw"
 },
 {
     title:"Stranger Things",
@@ -15,7 +15,7 @@ export const MOVIE : Movie[] = [
     image:"https://picsum.photos/200/300",
     rating:3,
     id:"12877675",
-    trailer: "https://youtu.be/hDNNmeeJs1Q"
+    trailer: "https://www.youtube.com/embed/yqaGCox8Vms"
 },
 {
     title:"The Office",
@@ -23,9 +23,7 @@ export const MOVIE : Movie[] = [
     image:"https://picsum.photos/200/300",
     rating:4,
     id:"1298895",
-    trailer: "https://youtu.be/hDNNmeeJs1Q"
+    trailer: "https://www.youtube.com/embed/sLisEEwYZvw"
 },
-
-
 ]
 
